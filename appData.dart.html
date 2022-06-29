@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>appData.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+appData.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">AppData {</span>
+  <span class="s1">int? result</span><span class="s0">;</span>
+  <span class="s1">UserModel? data</span><span class="s0">;</span>
+  <span class="s1">String? message</span><span class="s0">;</span>
+
+  <span class="s2">// AppData({required this.result, required this.data, required this.message});</span>
+  <span class="s1">AppData.fromJson(Map&lt;String</span><span class="s0">, </span><span class="s1">dynamic&gt; json) {</span>
+    <span class="s1">result = json[</span><span class="s3">'Result'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">data = UserModel.fromJson(json[</span><span class="s3">'Data'</span><span class="s1">])</span><span class="s0">;</span>
+    <span class="s2">// data = (json['Data'] != null ? UserModel.fromJson(json['Data']) : null);</span>
+    <span class="s1">message = json[</span><span class="s3">'Message'</span><span class="s1">]</span><span class="s0">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">class </span><span class="s1">UserModel {</span>
+  <span class="s1">int? id</span><span class="s0">;</span>
+  <span class="s1">String? userName</span><span class="s0">;</span>
+  <span class="s1">String? email</span><span class="s0">;</span>
+  <span class="s2">// late String password;</span>
+  <span class="s1">String? birthDate</span><span class="s0">;</span>
+  <span class="s1">String? mobileNumber</span><span class="s0">;</span>
+  <span class="s1">String? rescuerMobileNumber</span><span class="s0">;</span>
+  <span class="s1">String? address</span><span class="s0">;</span>
+  <span class="s2">// late String gender;</span>
+  <span class="s2">// late int userTypeId;</span>
+  <span class="s1">int? doctorSpecializationId</span><span class="s0">;</span>
+
+  <span class="s1">UserModel(</span>
+      <span class="s1">{</span><span class="s0">this</span><span class="s1">.userName</span><span class="s0">,</span>
+      <span class="s0">this</span><span class="s1">.email</span><span class="s0">,</span>
+      <span class="s2">// this.password,</span>
+      <span class="s0">this</span><span class="s1">.birthDate</span><span class="s0">,</span>
+      <span class="s0">this</span><span class="s1">.mobileNumber</span><span class="s0">,</span>
+      <span class="s0">this</span><span class="s1">.rescuerMobileNumber</span><span class="s0">,</span>
+      <span class="s0">this</span><span class="s1">.address</span><span class="s0">,</span>
+      <span class="s2">// this.gender,</span>
+      <span class="s2">// this.userTypeId,</span>
+      <span class="s0">this</span><span class="s1">.doctorSpecializationId})</span><span class="s0">;</span>
+
+  <span class="s1">UserModel.fromJson(</span>
+    <span class="s1">Map&lt;String</span><span class="s0">, </span><span class="s1">dynamic&gt; json</span><span class="s0">,</span>
+  <span class="s1">) {</span>
+    <span class="s1">id = json[</span><span class="s3">'Id'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">userName = json[</span><span class="s3">'UserName'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">email = json[</span><span class="s3">'Email'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s2">// password = json['Password'];</span>
+    <span class="s1">birthDate = json[</span><span class="s3">'BirthDate'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">mobileNumber = json[</span><span class="s3">'MobileNumber'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">rescuerMobileNumber = json[</span><span class="s3">'RescuerMobileNumber'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s1">address = json[</span><span class="s3">'Address'</span><span class="s1">]</span><span class="s0">;</span>
+    <span class="s2">// gender = json['Gender'];</span>
+    <span class="s2">// userTypeId = json['UserTypeId'];</span>
+    <span class="s1">doctorSpecializationId = json[</span><span class="s3">'DoctorSpecializationId'</span><span class="s1">]</span><span class="s0">;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
